@@ -9,12 +9,11 @@ const totip= document.getElementById("numofp")
 const rsButt= document.getElementById("reset")
 const first= document.getElementById("total-tips")
 const secound= document.getElementById("tip-per")
-let bill,totalper,totaltip,eachTip
 function totalTipp(inp){
-    bill= +ammount.value
-    totalper= +totip.value 
-    totaltip= (((inp/100)*bill)/totalper).toFixed(2)
-    eachTip=((bill+(inp/100)*bill)/totalper).toFixed(2)
+    let bill= +ammount.value
+    let totalper= +totip.value 
+    let totaltip= (((inp/100)*bill)/totalper).toFixed(2)
+     let eachTip=((bill+(inp/100)*bill)/totalper).toFixed(2)
     console.log(eachTip)
     console.log(totaltip)
     first.innerHTML=`$${totaltip}`
@@ -30,32 +29,26 @@ cosDis.addEventListener("input",()=>{
 })
 
 dis5.addEventListener("click",()=>{
-    if(totip.value=="" || totip==0){
-       
-    }else{
+    
         totalTipp(5)
-    }
+    
 })
 dis10.addEventListener("click",()=>{
-    if(totip.value=="" || totip==0){
        
-    }else{
         totalTipp(10)
-    }
+    
 })
 dis15.addEventListener("click",()=>{
-    if(totip.value=="" || totip==0){
        
-    }else{
+    
         totalTipp(15)
-    }
+    
 })
 dis25.addEventListener("click",()=>{
-    if(totip.value=="" || totip==0){
        
-    }else{
+    
         totalTipp(25)
-    }
+    
 })
 dis50.addEventListener("click",()=>{
     if(totip.value=="" || totip==0){
@@ -65,7 +58,7 @@ dis50.addEventListener("click",()=>{
     }
 })
 rsButt.addEventListener("click",()=>{
-    totaltip.innerHTML=`$0.00`
-    eachTip.innerHTML=`$0.00`
+     first.innerHTML=`$0.00`
+    secound.innerHTML=`$0.00`
 })
 
